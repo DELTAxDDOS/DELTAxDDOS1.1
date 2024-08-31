@@ -110,9 +110,9 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_users()
             del keys[key]
             save_keys()
-            response = f"✅Key redeemed successfully! Access granted until: {users[user_id]} OWNER- @{The_Fiend102}..."
+            response = f"✅Key redeemed successfully! Access granted until: {users[user_id]} OWNER- {@The_Fiend102}..."
         else:
-            response = "Invalid or expired key buy from @{The_Fiend102}."
+            response = "Invalid or expired key buy from {@The_Fiend102}."
     else:
         response = "Usage: /redeem <key>"
 
@@ -163,7 +163,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- @{The_Fiend102}...")
+        await update.message.reply_text("❌ Access expired or unauthorized. Please redeem a valid key.buy key from- {@The_Fiend102}...")
         return
 
     if flooding_process is not None:
