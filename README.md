@@ -25,7 +25,7 @@ This repository contains a Telegram bot designed to perform DDoS attacks. The bo
 
    ```sh
    git clone https://github.com/DELTAxDDOS/DELTAxDDOS1.1
-   cd VENOMxDDOS
+   cd DELTAxDDOS
    ```
 
 2. Install the required libraries:
